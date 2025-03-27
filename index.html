@@ -310,7 +310,7 @@
 
     <div id="outputBox" class="output-box">
         <h3>Analysis Results</h3>
-            <p><strong>Job Suggestions:</strong> <span id="jobSuggestions">Loading...</span></p>
+            <p><strong>Job Suggestions:</strong> <span id="job_suggestions">Loading...</span></p>
             <p><strong>Strengths:</strong> <span id="strengths">Analyzing...</span></p>
             <p><strong>Weaknesses:</strong> <span id="weaknesses">Evaluating...</span></p>
             <p><strong>Summary:</strong> <span id="summary">Generating summary...</span></p>
@@ -343,7 +343,7 @@
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('jobSuggestions').textContent = data.jobSuggestions || 'No suggestions available.';
+                document.getElementById('jobSuggestions').textContent = data.job_suggestions || 'No suggestions available.';
                 document.getElementById('strengths').textContent = data.strengths || 'No strengths provided.';
                 document.getElementById('weaknesses').textContent = data.weaknesses || 'No weaknesses provided.';
                 document.getElementById('summary').textContent = data.summary || 'No summary provided.';
